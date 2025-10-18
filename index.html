@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chaossbrand.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1 class="brand">chaosbrand.</h1>
+  </header>
+  <button class="cart-icon" aria-label="Cart"><span class="cart-count">0</span>&#128722;</button>
+
+  <main class="product-grid">
+    <div class="card">
+      <div class="image-wrapper">
+        <img src="images/stussy los angelos hoodie.webp" alt="Product 1" />
+      </div>
+      <h3 class="product-name">Stussy los angeles hoodie</h3>
+      <p class="price">59DT</p>
+    </div>
+    <div class="card">
+      <div class="image-wrapper">
+        <img src="images/STUSSY GLOBAL HOODIE.webp" alt="Product 2" />
+      </div>
+      <h3 class="product-name">Stussy global hoodie</h3>
+      <p class="price">59DT</p>
+    </div>
+    <div class="card">
+      <div class="image-wrapper">
+        <img src="images/stussy x supreme hoodie.webp" alt="stussy x supreme hoodie" />
+      </div>
+      <h3 class="product-name">Stussy x supreme hoodie</h3>
+      <p class="price">59DT</p>
+    </div>
+    <div class="card">
+      <div class="image-wrapper">
+        <img src="images/stussy 2.0 hoodie.webp" alt="stussy 2.0 hoodie" />
+      </div>
+      <h3 class="product-name">Stussy 2.0 hoodie</h3>
+      <p class="price">59DT</p>
+    </div>
+    <div class="card">
+      <div class="image-wrapper">
+        <img src="images/kissed stussy hoodie.webp" alt="kissed stussy hoodie" />
+      </div>
+      <h3 class="product-name">Kissed stussy hoodie</h3>
+      <p class="price">59DT</p>
+    </div>
+    <div class="card">
+      <div class="image-wrapper">
+        <img src="images/dice stussy hoodie.webp" alt="dice stussy hoodie" />
+      </div>
+      <h3 class="product-name">Dice stussy hoodie</h3>
+      <p class="price">59DT</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 chaossbrand. All rights reserved.</p>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div id="product-modal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-images">
+          <img id="main-image" src="" alt="Product image" class="main-img">
+          <div class="thumbs">
+            <img class="thumb" src="" alt="Thumbnail 1" />
+            <img class="thumb" src="" alt="Thumbnail 2" />
+            <img class="thumb" src="" alt="Thumbnail 3" />
+          </div>
+        </div>
+        <div class="modal-info">
+          <h2 class="modal-product-name">Product Name</h2>
+          <p class="modal-price">
+            <span class="current-price">59DT</span>
+            <span class="original-price"></span>
+          </p>
+
+          <div class="sizes">
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+
+          <div class="quantity">
+            <button class="qty-btn minus">−</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn plus">＋</button>
+          </div>
+
+          <form class="customer-form">
+            <input type="text" placeholder="Full name" required />
+            <input type="tel" placeholder="Phone number" required />
+            <select required>
+              <option value="">Select city</option>
+                <option value="tunis">Tunis</option>
+                <option value="sfax">Sfax</option>
+                <option value="sousse">Sousse</option>
+                <option value="bizerte">Bizerte</option>
+                <option value="ariana">Ariana</option>
+                <option value="benarous">Ben Arous</option>
+                <option value="manouba">Manouba</option>
+                <option value="nabeul">Nabeul</option>
+                <option value="zaghouan">Zaghouan</option>
+                <option value="beja">Béja</option>
+                <option value="jendouba">Jendouba</option>
+                <option value="kef">Le Kef</option>
+                <option value="siliana">Siliana</option>
+                <option value="kairouan">Kairouan</option>
+                <option value="kasserine">Kasserine</option>
+                <option value="sidiBouzid">Sidi Bouzid</option>
+                <option value="sfax">Sfax</option>
+                <option value="gafsa">Gafsa</option>
+                <option value="tozeur">Tozeur</option>
+                <option value="kebili">Kébili</option>
+                <option value="gabes">Gabès</option>
+                <option value="medenine">Medenine</option>
+                <option value="tataouine">Tataouine</option>
+                <option value="mahdia">Mahdia</option>
+            </select>
+            <textarea placeholder="Full address" rows="3" required></textarea>
+          </form>
+
+          <div class="totals">
+            <p>Subtotal: <span id="subtotal-val">59DT</span></p>
+            <p>Shipping: <span id="shipping-val">7DT</span></p>
+            <p>Total: <span id="total-val">66DT</span></p>
+          </div>
+
+          <div class="action-btns">
+            <button class="buy-btn">Buy Now</button>
+            <button class="cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content cart-content">
+      <button class="close-btn cart-close" aria-label="Close cart">&times;</button>
+      <h2 style="margin-bottom:1rem">My Cart</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-totals" style="margin-top:1rem">
+        <p>Total Items: <span id="cart-items-count">0</span></p>
+        <p>Shipping: <span id="cart-shipping">7DT</span></p>
+        <p>Total Price: <span id="cart-total-price">0DT</span></p>
+      </div>
+      <div class="action-btns" style="margin-top:1.5rem">
+        <button id="checkout-btn" class="buy-btn">Send Order</button>
+        <button id="clear-cart-btn" class="cart-btn">Clear Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
