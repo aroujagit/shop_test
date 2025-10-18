@@ -123,19 +123,18 @@ body{
   inset:0;
   background:rgba(0,0,0,0.7);
 }
-.modal-content{
-  position:relative;
-  background:var(--surface);
-  border-radius:var(--radius);
-  padding:2rem;
-  display:flex;
-  flex-wrap:wrap;
-  gap:2rem;
-  max-width:900px;
-  width:90%;
-  max-height:90vh;
-  overflow-y:auto;
-  z-index:1;
+.modal-content {
+  display: flex;
+  flex-direction: column;  /* stack children vertically */
+  gap: 1.5rem;            /* optional spacing */
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: var(--surface);
 }
 .close-btn{
   position:absolute;
@@ -244,8 +243,11 @@ body{
 }
 .action-btns{
   display:flex;
-  gap:1rem;
+  gap:1rem;       /* buttons side by side */
+  margin-top:1rem; /* spacing from totals */
 }
+
+
 .buy-btn,
 .cart-btn{
   flex:1;
@@ -287,6 +289,8 @@ body{
 .cart-content{
   display:flex;
   flex-direction:column;
+  max-height:80vh;
+  padding:1rem;
 }
 
 .cart-items{
@@ -294,7 +298,11 @@ body{
   flex-direction:column;
   gap:1rem;
   max-height:50vh;
-  overflow-y:auto;
+  overflow-y:auto;  /* scroll if too tall */
+}
+
+.cart-totals{
+  margin-top:1rem;
 }
 .cart-item{
   display:flex;
