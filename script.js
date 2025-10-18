@@ -51,7 +51,7 @@ function openModal(name, price, imgSrc) {
   productNameEl.textContent = name;
   unitPrice = parseFloat(price);
   currentPriceEl.textContent = price + 'DT';
-  originalPriceEl.textContent = '';
+  originalPriceEl.textContent = '70DT';
   mainImg.src = imgSrc;
   thumbImgs.forEach(t => (t.src = imgSrc));
   qty = 1;

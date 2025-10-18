@@ -331,6 +331,15 @@ body{
   cursor:pointer;
 }
 
+/* Show original price crossed out */
+.price::after{
+  content:" 70DT";
+  text-decoration:line-through;
+  color:#888;
+  margin-left:0.5rem;
+  font-weight:400;
+}
+
 @media(max-width:768px){
   .modal-content{
     flex-direction:column;
